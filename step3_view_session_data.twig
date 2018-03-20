@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Step 3 - View Session Data</title>
+</head>
+<body>
+<h2>Session Data Stored on the Server:</h2>
+
+<!-- This example shows you how to do everything using twig: http://twigfiddle.com/pr3mk1 -->
+
+<!-- Your code here: on the next line, add a filter to print first name capitalized -->
+First Name: {{ first_name | capitalize }}<br/>
+Last Name: {{ last_name | capitalize }}<br/>
+Age: {{ age }}<br/>
+Favorite Numbers: {{ favorite_numbers | join(', ') }}<br/>
+{% set sum = 0 %}
+{% for number in favorite_numbers %}
+{% set sum = sum + number %}
+{% endfor %}
+Average of Favorite Numbers: {{ sum / favorite_numbers | length }}<br/><br/>
+
+Go back to the input form <a href="step1_form.html">here</a>.<br/>
+Delete the stored session data <a href="delete_session_data.php">here</a>.
+</body>
+</html>
